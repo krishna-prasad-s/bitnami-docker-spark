@@ -29,9 +29,6 @@ ENV BITNAMI_APP_NAME="spark" \
     NSS_WRAPPER_PASSWD="/opt/bitnami/spark/tmp/nss_passwd" \
     SPARK_HOME="/opt/bitnami/spark"
 
-COPY default.conf /opt/bitnami/spark/conf/spark-defaults.conf
-
 WORKDIR /opt/bitnami/spark
-USER 1001
 ENTRYPOINT [ "/opt/bitnami/scripts/spark/entrypoint.sh" ]
 CMD [ "/opt/bitnami/scripts/spark/run.sh" ]
